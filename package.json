@@ -1,0 +1,26 @@
+{
+  "name": "agile-code-qc",
+  "version": "1.0.0",
+  "description": "---------------------------------------------------------------------------- Initialization of repository for employee scheduling.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LosslessLeaf/Agile-code-QC.git"
+  },
+  "author": "SCRUM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LosslessLeaf/Agile-code-QC/issues"
+  },
+  "homepage": "https://github.com/LosslessLeaf/Agile-code-QC#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.4.19"
+  }
+}
