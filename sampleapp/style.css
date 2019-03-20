@@ -1,0 +1,11 @@
+body {
+    background: #0a3d62;
+    font-family: merriweather;
+    color: white;
+}
+
+.center {
+  margin: auto;
+  padding-top: 10%;
+  padding-left: 50%;
+}
