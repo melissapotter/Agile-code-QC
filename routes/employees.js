@@ -5,8 +5,9 @@ const Employee = require("../models/employee");
 
 // get a list of users from the db
 router.get("/employees", function(req, res, next) {
-    Employee.find({}).then(function(users){
-        res.send(employees);
+    Employee.find({}).then(function(employee){
+        console.log("reached route");
+        res.send(employee);
     });
 });
 
