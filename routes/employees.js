@@ -6,7 +6,7 @@ const Employee = require("../models/employee");
 // get a list of users from the db
 router.get("/employees", function(req, res, next) {
     Employee.find({}).then(function(users){
-        res.send("landing");
+        res.send(employees);
     });
 });
 
