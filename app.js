@@ -22,11 +22,16 @@ app.use(bodyParser.json());
 
 
 // When we need to initialize and use routing, use this. Remove the <> symbols and add your directory name
-// app.use("/<<directory name here>>", require("./routes/<<directory name here>>"));
+app.use("/agile", require("./routes/employees"));
 
 // error handling middleware if needed
-app.use(function(err, req, res, next){
-    
+app.use("/routes", function(err, req, res, next){
+    console.log(err);
+    throw err;
+});
+
+app.get("/", function(req, res) {
+    res.render("landing");
 });
 
 
