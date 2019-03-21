@@ -1,0 +1,12 @@
+body {
+    background: #0a3d62;
+    font-family: merriweather;
+    color: white;
+}
+
+.center {
+  margin: auto;
+  width: 30%;
+  padding-top: 100px;
+  text-align: center;
+}
