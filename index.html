@@ -34,11 +34,29 @@
   </div>
 </nav>
 
+        // <script> 
+        
+        // function validateForm() {
+        //   var x = document.forms["empIdForm"]
+        //   ["empid"].value;
+        //   if (x == "") {
+        //     alert("Employee ID field cannot be left blank");
+        //     return false;
+        //   }
+        //   else (x > 0)  {
+        //     alert
+        //   }
+        // }
+        
+        // </script>
+
 <div class="center">
-<h1>ABC Company</h1> 
-<input type="text" id="employeeid" placeholder="Employee ID" value=""><br><input type="submit" value="Clock In"><input type="submit" value="Clock Out">
+<h1>ABC Company</h1>
+<input type="text" name="empid" id="employeeid" placeholder="Employee ID" value=""><br>
+<input type="submit" onclick="alert('You have clocked in.')" value="Clock In">
+<input type="submit" onclick="alert('You have clocked out.')" value="Clock Out">
        </div> 
-        <script src="app.js"></script>
+
         
     </body>
     
