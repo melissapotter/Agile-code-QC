@@ -8,7 +8,7 @@ const ejs = require("ejs");
 const app = express();
 
 // connect to mongodb
-mongoose.connect("mongodb://localhost/employees", {useNewUrlParser:true});
+mongoose.connect("mongodb://localhost/employees", { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
 // To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
@@ -34,3 +34,34 @@ app.get("/", function(req, res) {
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Now listening for requests");
 });
+
+
+//
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+function myfun() {
+    app.post('/', function(req, res) {
+        var clockIn = function startTime() {
+            var today = new Date();
+
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+
+
+            var total = h + m / 60 + s / 3600;
+            if (total > 0) {
+                
+            }
+            total = req.body.clockIn;
+
+        };
+        console.log(req.body);
+
+
+
+        res.send(req.body);
+
+    });
+}
