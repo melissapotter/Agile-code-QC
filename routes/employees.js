@@ -35,28 +35,6 @@ router.delete("/employee/:id", function(req, res, next) {
     });
 });
 
-//post clockin time
 
-router.post("/", function(req, res, next) {
-    Employee.create(req.body).then(function(employee) {
-        function startTime() {
-            var today = new Date();
-
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            var d = today.getDay();
-
-            var total = h + m / 60 + s / 3600;
-            document.getElementsByClassName('check').innerText = total;
-
-            if (total > 0) {
-                var total = req.body.clockIn;
-            }
-        }
-        res.send(employee);
-        alert(req.body);
-    });
-});
 
 module.exports = router;
