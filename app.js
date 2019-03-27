@@ -1,7 +1,6 @@
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const express = require("express");
-const ejs = require("ejs");
 
 const app = express();
 
@@ -11,7 +10,7 @@ mongoose.Promise = global.Promise;
 
 // To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
 app.use(bodyParser.json());
-app.use("/", express.static("views"))
+app.use("/", express.static("views"));
 
 // Set the app to use ejs files
 app.set("view engine", "ejs");
