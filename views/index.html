@@ -12,40 +12,41 @@
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <script type="text/javascript">
-    function makeGETRequest() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                console.log(this)
-                document.getElementById("getResponse").innerHTML = this.responseText
-           }
-        };
-        
-        xhttp.open("GET","https://cors-anywhere.herokuapp.com/https://careerdevs18-christiangracia.c9users.io/api", true);
-        xhttp.setRequestHeader("Content-type", "application/json");
-        xhttp.send(); 
+  function makeGETRequest() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this)
+        document.getElementById("getResponse").innerHTML = this.responseText
+      }
     };
-    //MAKE POST REQUEST
-    function makePOSTRequest() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                console.log(this)
-                document.getElementById("postResponse").innerHTML = this.responseText
-           }
-        };
-        //open(method, url, async)
-        xhttp.open("POST","https://cors-anywhere.herokuapp.com/https://careerdevs18-christiangracia.c9users.io/api", true);
-        //set header to match content type
-        xhttp.setRequestHeader("Content-type", "application/json");
-        const data = {
-            "employeeID": document.getElementById("employeeName").value
-        };
-        xhttp.send(JSON.stringify(data)); 
-    }    
+
+    xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://careerdevs18-christiangracia.c9users.io/api", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+  };
+  //MAKE POST REQUEST
+  function makePOSTRequest() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this)
+        document.getElementById("postResponse").innerHTML = this.responseText
+      }
+    };
+    //open(method, url, async)
+    xhttp.open("POST", "https://cors-anywhere.herokuapp.com/https://careerdevs18-christiangracia.c9users.io/api", true);
+    //set header to match content type
+    xhttp.setRequestHeader("Content-type", "application/json");
+    const data = {
+      "employeeID": document.getElementById("employeeName").value
+    };
+    xhttp.send(JSON.stringify(data));
+  }
 </script>
+
 <body>
-  
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <h1>ABC Company</h1>
@@ -73,12 +74,12 @@
   <div class="center">
     <h1>ABC Company</h1>
 
-        <button onclick="makeGETRequest();">Get Request</button>
-        <p id="getResponse"></p>
-        <p>Employee Name</p>
-        <input id="employeeName" type="text"/>
-        <button onclick="makePOSTRequest()">Post Request</button>
-        <p id="postResponse"></p>
+    <button onclick="makeGETRequest();">Get Request</button>
+    <p id="getResponse"></p>
+    <p>Employee Name</p>
+    <input id="employeeName" type="text" />
+    <button onclick="makePOSTRequest()">Post Request</button>
+    <p id="postResponse"></p>
 
 </body>
 

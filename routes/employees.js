@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Employee = require("../models/employee");
-const bodyParser= require("body-parser")
+const bodyParser = require("body-parser")
 
 // get a list of users from the db
 router.get("/employees", function(req, res, next) {
