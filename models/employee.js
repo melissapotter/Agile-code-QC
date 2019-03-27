@@ -5,15 +5,16 @@ const Schema = mongoose.Schema;
 
 // create user Schema & model
 const EmployeeSchema = new Schema({
-    name: {
-        type: String,
-        required: [true, "Name field is required"]
-    }
-    // ,
-    // time: {
-    //     clockin: Number,
-    //     clockout: Number
-    // }
+   name: {
+      type: String,
+   },
+   clockin: {
+      type: Number,
+      required: [true, "Error"]
+   },
+   clockout: {
+      type: Number
+   }
 });
 
 
